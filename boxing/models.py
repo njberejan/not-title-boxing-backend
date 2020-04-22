@@ -9,7 +9,7 @@ class WorkOut(models.Model):
 
 class BaseExercise(models.Model):
     name = models.CharField(max_length=100)
-    audio_file = None
+    audio_file = models.FileField()
 
 
 class WarmUp(models.Model):
