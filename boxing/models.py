@@ -8,7 +8,7 @@ class WorkOut(models.Model):
 
 
 class BaseExercise(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     audio_file = models.FileField()
 
 
