@@ -15,16 +15,19 @@ class BaseExercise(models.Model):
 class WarmUp(models.Model):
     """the exercises that make up the warm up period."""
     workout = models.ManyToManyField(WorkOut, related_name='warm_up')
+    length = models.IntegerField()
 
 
 class Round(models.Model):
     workout = models.ManyToManyField(WorkOut, related_name='rounds')
+    length = models.IntegerField()
 
 
 class CorePeriod(models.Model):
     """a series of core exercises that make up the core workout period."""
     workout = models.ManyToManyField(WorkOut, related_name='core_period')
-
+    length = models.IntegerField()
+    
 
 class Combo(models.Model):
     """a series of moves (punches or defensive) that make up a combo."""
